@@ -441,6 +441,28 @@
           "precision": null,
           "isPrimary": false,
           "isNotNull": true
+        },
+        {
+          "id": "f05c9bd9-8ebd-4f87-9c6e-25207d86bf5c",
+          "sequence": 4,
+          "key": "FK",
+          "property": "submittal_id",
+          "type": "",
+          "length": null,
+          "precision": null,
+          "isPrimary": false,
+          "isNotNull": true
+        },
+        {
+          "id": "fb991db5-961a-4056-b6b3-b8f0ed87ca0e",
+          "sequence": 5,
+          "key": "FK",
+          "property": "work_order_id",
+          "type": "",
+          "length": null,
+          "precision": null,
+          "isPrimary": false,
+          "isNotNull": true
         }
       ],
       "relationships": [
@@ -463,6 +485,26 @@
             "id": "60169084-1d55-4142-84ef-3108183aad4b"
           },
           "parentRequired": false
+        },
+        {
+          "id": "5aeb8000-5e80-4d74-8a32-89ba23ac1265",
+          "source": {
+            "id": "f05c9bd9-8ebd-4f87-9c6e-25207d86bf5c"
+          },
+          "reference": {
+            "id": "6845fe99-0aac-4d78-bf76-c438f388d07e"
+          },
+          "parentRequired": false
+        },
+        {
+          "id": "4df0df94-94c8-437f-9f05-3be7a9ad65f4",
+          "source": {
+            "id": "fb991db5-961a-4056-b6b3-b8f0ed87ca0e"
+          },
+          "reference": {
+            "id": "8d47b5e2-6142-48be-a4c6-3f344a5d2d62"
+          },
+          "parentRequired": false
         }
       ],
       "indexes": [
@@ -481,6 +523,24 @@
           "keyColumns": [
             {
               "columnId": "8db1b193-161f-471e-a669-c44fd137b652"
+            }
+          ]
+        },
+        {
+          "id": "51ad8f51-218a-4c30-b556-f19fa462a842",
+          "name": "IX_phase_submittal_id",
+          "keyColumns": [
+            {
+              "columnId": "f05c9bd9-8ebd-4f87-9c6e-25207d86bf5c"
+            }
+          ]
+        },
+        {
+          "id": "59760454-eacd-4e76-a914-ceef2028086b",
+          "name": "IX_phase_work_order_id",
+          "keyColumns": [
+            {
+              "columnId": "fb991db5-961a-4056-b6b3-b8f0ed87ca0e"
             }
           ]
         }
