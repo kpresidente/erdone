@@ -34,7 +34,19 @@
         "w": 200,
         "h": 80
       },
-      "properties": [],
+      "properties": [
+        {
+          "id": "03f1a6d7-77b6-45db-b20e-ee28848dace8",
+          "sequence": 1,
+          "key": "PK",
+          "property": "structure_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": true,
+          "isNotNull": true
+        }
+      ],
       "relationships": []
     }
   ],
