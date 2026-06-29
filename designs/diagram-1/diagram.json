@@ -86,7 +86,7 @@
       "id": "bfe4bda6-000c-4db5-b7be-8e1b571ad252",
       "name": "lp_system",
       "position": {
-        "x": 460,
+        "x": 680,
         "y": 50,
         "w": 200,
         "h": 80
@@ -102,9 +102,42 @@
           "precision": null,
           "isPrimary": false,
           "isNotNull": true
+        },
+        {
+          "id": "a15d8a25-4cf0-4985-94d2-616f5cfddfd4",
+          "sequence": 2,
+          "key": "FK",
+          "property": "structure_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": false,
+          "isNotNull": true
         }
       ],
-      "relationships": []
+      "relationships": [
+        {
+          "id": "f6c31fe7-352b-47d5-910e-67496661a964",
+          "source": {
+            "id": "a15d8a25-4cf0-4985-94d2-616f5cfddfd4"
+          },
+          "reference": {
+            "id": "03f1a6d7-77b6-45db-b20e-ee28848dace8"
+          },
+          "parentRequired": false
+        }
+      ],
+      "indexes": [
+        {
+          "id": "c8b29b3a-aca9-4975-a322-3ddf0536b268",
+          "name": "IX_lp_system_structure_id",
+          "keyColumns": [
+            {
+              "columnId": "a15d8a25-4cf0-4985-94d2-616f5cfddfd4"
+            }
+          ]
+        }
+      ]
     }
   ],
   "dialect": "postgres",
