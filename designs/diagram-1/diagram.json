@@ -326,6 +326,18 @@
         }
       ],
       "relationships": []
+    },
+    {
+      "id": "8e0e3ded-803b-447d-999e-518d93b70eaa",
+      "name": "proposal",
+      "position": {
+        "x": 720,
+        "y": -101,
+        "w": 200,
+        "h": 80
+      },
+      "properties": [],
+      "relationships": []
     }
   ],
   "dialect": "postgres",
