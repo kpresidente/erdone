@@ -557,8 +557,42 @@
         "w": 200,
         "h": 80
       },
-      "properties": [],
-      "relationships": []
+      "properties": [
+        {
+          "id": "e1da0d39-921d-47d9-a3cf-90efb4eb9e85",
+          "sequence": 1,
+          "key": "FK",
+          "property": "lp_partial_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": false,
+          "isNotNull": true
+        }
+      ],
+      "relationships": [
+        {
+          "id": "9f331962-ffc7-466a-a137-73ae71da4d4b",
+          "source": {
+            "id": "e1da0d39-921d-47d9-a3cf-90efb4eb9e85"
+          },
+          "reference": {
+            "id": "90268b14-ee3c-4054-a8eb-1c4c0f53bf7d"
+          },
+          "parentRequired": false
+        }
+      ],
+      "indexes": [
+        {
+          "id": "1e982539-a1d2-4dd9-a3cf-2167dce958a0",
+          "name": "IX_cost_collection_lp_partial_id",
+          "keyColumns": [
+            {
+              "columnId": "e1da0d39-921d-47d9-a3cf-90efb4eb9e85"
+            }
+          ]
+        }
+      ]
     }
   ],
   "dialect": "postgres",
