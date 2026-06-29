@@ -210,34 +210,34 @@
         {
           "id": "90268b14-ee3c-4054-a8eb-1c4c0f53bf7d",
           "sequence": 1,
-          "key": "FK",
+          "key": "PK",
           "property": "lp_partial_id",
           "type": "UUID",
           "length": null,
           "precision": null,
-          "isPrimary": false,
+          "isPrimary": true,
           "isNotNull": true
         },
         {
           "id": "97fcd9a7-fbf3-435c-8228-01a430b5cdcf",
           "sequence": 2,
-          "key": "FK",
+          "key": "PK",
           "property": "structure_id",
           "type": "UUID",
           "length": null,
           "precision": null,
-          "isPrimary": false,
+          "isPrimary": true,
           "isNotNull": true
         },
         {
           "id": "556f0ed7-8395-4904-910e-945eeb73359e",
           "sequence": 3,
-          "key": "FK",
+          "key": "PK",
           "property": "scope_id",
           "type": "UUID",
           "length": null,
           "precision": null,
-          "isPrimary": false,
+          "isPrimary": true,
           "isNotNull": true
         }
       ],
