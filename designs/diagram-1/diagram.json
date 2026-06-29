@@ -228,6 +228,17 @@
           "precision": null,
           "isPrimary": false,
           "isNotNull": true
+        },
+        {
+          "id": "556f0ed7-8395-4904-910e-945eeb73359e",
+          "sequence": 3,
+          "key": "FK",
+          "property": "scope_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": false,
+          "isNotNull": true
         }
       ],
       "relationships": [
@@ -250,6 +261,16 @@
             "id": "03f1a6d7-77b6-45db-b20e-ee28848dace8"
           },
           "parentRequired": false
+        },
+        {
+          "id": "a0ce7ecf-d0ee-41be-a194-ac7706eccf35",
+          "source": {
+            "id": "556f0ed7-8395-4904-910e-945eeb73359e"
+          },
+          "reference": {
+            "id": "5f72f242-f6bc-4dd6-b7e8-08c757f90c9f"
+          },
+          "parentRequired": false
         }
       ],
       "indexes": [
@@ -268,6 +289,15 @@
           "keyColumns": [
             {
               "columnId": "97fcd9a7-fbf3-435c-8228-01a430b5cdcf"
+            }
+          ]
+        },
+        {
+          "id": "f7c52d7b-89b6-42ee-85f6-1aa54c2ecabf",
+          "name": "IX_scope_item_scope_id",
+          "keyColumns": [
+            {
+              "columnId": "556f0ed7-8395-4904-910e-945eeb73359e"
             }
           ]
         }
