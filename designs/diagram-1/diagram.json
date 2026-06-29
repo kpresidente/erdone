@@ -95,12 +95,12 @@
         {
           "id": "ddf5f960-bfde-4b51-b0e0-6b6b02b37ecf",
           "sequence": 1,
-          "key": null,
+          "key": "PK",
           "property": "lp_system_id",
           "type": "UUID",
           "length": null,
           "precision": null,
-          "isPrimary": false,
+          "isPrimary": true,
           "isNotNull": true
         },
         {
