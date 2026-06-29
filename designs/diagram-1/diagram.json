@@ -557,7 +557,41 @@
         "w": 200,
         "h": 80
       },
-      "properties": [],
+      "properties": [
+        {
+          "id": "581a8b3f-bdbe-4f62-92d1-aade0c34d1fc",
+          "sequence": 1,
+          "key": "FK",
+          "property": "scope_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": false,
+          "isNotNull": true
+        },
+        {
+          "id": "fcf7f0f4-68eb-4c91-b45f-06d5e697ee5f",
+          "sequence": 2,
+          "key": "FK",
+          "property": "structure_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": false,
+          "isNotNull": true
+        },
+        {
+          "id": "09f222c8-4bc0-49f2-8a07-fd5180c8a13d",
+          "sequence": 3,
+          "key": "FK",
+          "property": "lp_partial_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": false,
+          "isNotNull": true
+        }
+      ],
       "relationships": [
         {
           "id": "9f331962-ffc7-466a-a137-73ae71da4d4b",
@@ -578,9 +612,67 @@
             "id": "c61dacbb-3a8a-4d3b-8003-acbe58bb8570"
           },
           "parentRequired": false
+        },
+        {
+          "id": "b04aa652-643f-4e14-b3b7-fed5e1e01ca9",
+          "source": {
+            "id": "581a8b3f-bdbe-4f62-92d1-aade0c34d1fc"
+          },
+          "reference": {
+            "id": "556f0ed7-8395-4904-910e-945eeb73359e"
+          },
+          "parentRequired": false
+        },
+        {
+          "id": "aa2f3847-11c9-4ca0-9b9d-b01a87a7a68e",
+          "source": {
+            "id": "fcf7f0f4-68eb-4c91-b45f-06d5e697ee5f"
+          },
+          "reference": {
+            "id": "97fcd9a7-fbf3-435c-8228-01a430b5cdcf"
+          },
+          "parentRequired": false
+        },
+        {
+          "id": "c58d4013-9602-4ce4-b3a7-aea30a00e1a6",
+          "source": {
+            "id": "09f222c8-4bc0-49f2-8a07-fd5180c8a13d"
+          },
+          "reference": {
+            "id": "90268b14-ee3c-4054-a8eb-1c4c0f53bf7d"
+          },
+          "parentRequired": false
         }
       ],
-      "indexes": []
+      "indexes": [
+        {
+          "id": "038ac842-98c6-4368-bc4d-a425a6f71a6f",
+          "name": "IX_cost_collection_scope_id",
+          "keyColumns": [
+            {
+              "columnId": "581a8b3f-bdbe-4f62-92d1-aade0c34d1fc"
+            }
+          ]
+        },
+        {
+          "id": "a54da84a-57b0-4128-a37e-cbe5c5179281",
+          "name": "IX_cost_collection_structure_id",
+          "keyColumns": [
+            {
+              "columnId": "fcf7f0f4-68eb-4c91-b45f-06d5e697ee5f"
+            }
+          ]
+        },
+        {
+          "id": "72705a13-d3d4-4853-8f65-dc7b0e90b551",
+          "name": "IX_cost_collection_lp_partial_id",
+          "keyColumns": [
+            {
+              "columnId": "09f222c8-4bc0-49f2-8a07-fd5180c8a13d"
+            }
+          ]
+        }
+      ]
     }
   ],
   "dialect": "postgres",
