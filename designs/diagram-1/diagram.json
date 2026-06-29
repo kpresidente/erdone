@@ -81,6 +81,30 @@
           ]
         }
       ]
+    },
+    {
+      "id": "bfe4bda6-000c-4db5-b7be-8e1b571ad252",
+      "name": "lp_system",
+      "position": {
+        "x": 312,
+        "y": 37.5,
+        "w": 200,
+        "h": 80
+      },
+      "properties": [
+        {
+          "id": "ddf5f960-bfde-4b51-b0e0-6b6b02b37ecf",
+          "sequence": 1,
+          "key": null,
+          "property": "lp_system_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": false,
+          "isNotNull": true
+        }
+      ],
+      "relationships": []
     }
   ],
   "dialect": "postgres",
