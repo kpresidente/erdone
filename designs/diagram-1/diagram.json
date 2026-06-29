@@ -419,9 +419,42 @@
           "precision": null,
           "isPrimary": true,
           "isNotNull": true
+        },
+        {
+          "id": "5438d2de-e11b-46d1-a74c-481dd841a725",
+          "sequence": 2,
+          "key": "FK",
+          "property": "scope_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": false,
+          "isNotNull": true
         }
       ],
-      "relationships": []
+      "relationships": [
+        {
+          "id": "ff1f64b8-b978-4d2b-a487-6e589158453a",
+          "source": {
+            "id": "5438d2de-e11b-46d1-a74c-481dd841a725"
+          },
+          "reference": {
+            "id": "5f72f242-f6bc-4dd6-b7e8-08c757f90c9f"
+          },
+          "parentRequired": false
+        }
+      ],
+      "indexes": [
+        {
+          "id": "f62a6f02-5102-427d-b709-d628614d79d5",
+          "name": "IX_phase_scope_id",
+          "keyColumns": [
+            {
+              "columnId": "5438d2de-e11b-46d1-a74c-481dd841a725"
+            }
+          ]
+        }
+      ]
     }
   ],
   "dialect": "postgres",
