@@ -552,24 +552,12 @@
       "id": "38b520cd-e230-4cdf-aa6e-dec90b9a719c",
       "name": "cost_collection",
       "position": {
-        "x": 360,
-        "y": 660,
+        "x": 270,
+        "y": 880,
         "w": 200,
         "h": 80
       },
-      "properties": [
-        {
-          "id": "e1da0d39-921d-47d9-a3cf-90efb4eb9e85",
-          "sequence": 1,
-          "key": "FK",
-          "property": "lp_partial_id",
-          "type": "UUID",
-          "length": null,
-          "precision": null,
-          "isPrimary": false,
-          "isNotNull": true
-        }
-      ],
+      "properties": [],
       "relationships": [
         {
           "id": "9f331962-ffc7-466a-a137-73ae71da4d4b",
@@ -592,17 +580,7 @@
           "parentRequired": false
         }
       ],
-      "indexes": [
-        {
-          "id": "1e982539-a1d2-4dd9-a3cf-2167dce958a0",
-          "name": "IX_cost_collection_lp_partial_id",
-          "keyColumns": [
-            {
-              "columnId": "e1da0d39-921d-47d9-a3cf-90efb4eb9e85"
-            }
-          ]
-        }
-      ]
+      "indexes": []
     }
   ],
   "dialect": "postgres",
