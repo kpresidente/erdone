@@ -24,6 +24,18 @@
         }
       ],
       "relationships": []
+    },
+    {
+      "id": "20b3f8fb-a1b7-4753-b71a-9224bf2c548a",
+      "name": "",
+      "position": {
+        "x": 225.42750778723814,
+        "y": 183.88717250719884,
+        "w": 200,
+        "h": 80
+      },
+      "properties": [],
+      "relationships": []
     }
   ],
   "dialect": "postgres",
