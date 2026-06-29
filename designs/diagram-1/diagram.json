@@ -143,7 +143,7 @@
       "id": "bed2227f-cd7a-4dc3-8e94-2355ed1ec905",
       "name": "lp_partial",
       "position": {
-        "x": 910,
+        "x": 960,
         "y": 50,
         "w": 200,
         "h": 80
@@ -159,9 +159,42 @@
           "precision": null,
           "isPrimary": true,
           "isNotNull": true
+        },
+        {
+          "id": "7f1c778b-3ce7-452d-ab03-5caa2fb02dca",
+          "sequence": 2,
+          "key": "FK",
+          "property": "lp_system_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": false,
+          "isNotNull": true
         }
       ],
-      "relationships": []
+      "relationships": [
+        {
+          "id": "1d45fd89-50ca-4852-a1d2-37f4c1208f09",
+          "source": {
+            "id": "7f1c778b-3ce7-452d-ab03-5caa2fb02dca"
+          },
+          "reference": {
+            "id": "ddf5f960-bfde-4b51-b0e0-6b6b02b37ecf"
+          },
+          "parentRequired": false
+        }
+      ],
+      "indexes": [
+        {
+          "id": "b593fd84-7a8a-4dc7-a9ae-667404f106e2",
+          "name": "IX_lp_partial_lp_system_id",
+          "keyColumns": [
+            {
+              "columnId": "7f1c778b-3ce7-452d-ab03-5caa2fb02dca"
+            }
+          ]
+        }
+      ]
     }
   ],
   "dialect": "postgres",
