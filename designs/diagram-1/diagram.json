@@ -350,6 +350,54 @@
         }
       ],
       "relationships": []
+    },
+    {
+      "id": "baa13728-b787-45de-91ba-83b8be8c9f31",
+      "name": "submittal",
+      "position": {
+        "x": 960,
+        "y": 510,
+        "w": 200,
+        "h": 80
+      },
+      "properties": [
+        {
+          "id": "6845fe99-0aac-4d78-bf76-c438f388d07e",
+          "sequence": 1,
+          "key": "PK",
+          "property": "submittal_id",
+          "type": "",
+          "length": null,
+          "precision": null,
+          "isPrimary": true,
+          "isNotNull": true
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "628f0493-0e59-4823-aafb-cef0c66dd4a0",
+      "name": "work_order",
+      "position": {
+        "x": 970,
+        "y": 620,
+        "w": 200,
+        "h": 80
+      },
+      "properties": [
+        {
+          "id": "8d47b5e2-6142-48be-a4c6-3f344a5d2d62",
+          "sequence": 1,
+          "key": "PK",
+          "property": "work_order_id",
+          "type": "",
+          "length": null,
+          "precision": null,
+          "isPrimary": true,
+          "isNotNull": true
+        }
+      ],
+      "relationships": []
     }
   ],
   "dialect": "postgres",
