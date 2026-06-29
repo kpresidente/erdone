@@ -202,7 +202,7 @@
       "name": "scope_item",
       "position": {
         "x": 1270,
-        "y": 50,
+        "y": 190,
         "w": 200,
         "h": 80
       },
@@ -212,6 +212,17 @@
           "sequence": 1,
           "key": "FK",
           "property": "lp_partial_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": false,
+          "isNotNull": true
+        },
+        {
+          "id": "97fcd9a7-fbf3-435c-8228-01a430b5cdcf",
+          "sequence": 2,
+          "key": "FK",
+          "property": "structure_id",
           "type": "UUID",
           "length": null,
           "precision": null,
@@ -229,6 +240,16 @@
             "id": "c61dacbb-3a8a-4d3b-8003-acbe58bb8570"
           },
           "parentRequired": false
+        },
+        {
+          "id": "b0c85fda-8f49-4867-bed2-78828e742264",
+          "source": {
+            "id": "97fcd9a7-fbf3-435c-8228-01a430b5cdcf"
+          },
+          "reference": {
+            "id": "03f1a6d7-77b6-45db-b20e-ee28848dace8"
+          },
+          "parentRequired": false
         }
       ],
       "indexes": [
@@ -238,6 +259,15 @@
           "keyColumns": [
             {
               "columnId": "90268b14-ee3c-4054-a8eb-1c4c0f53bf7d"
+            }
+          ]
+        },
+        {
+          "id": "746fa413-c420-4459-aa2f-ef34155f7f08",
+          "name": "IX_scope_item_structure_id",
+          "keyColumns": [
+            {
+              "columnId": "97fcd9a7-fbf3-435c-8228-01a430b5cdcf"
             }
           ]
         }
