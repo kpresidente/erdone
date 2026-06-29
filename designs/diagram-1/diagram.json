@@ -336,7 +336,19 @@
         "w": 200,
         "h": 80
       },
-      "properties": [],
+      "properties": [
+        {
+          "id": "60169084-1d55-4142-84ef-3108183aad4b",
+          "sequence": 1,
+          "key": "PK",
+          "property": "proposal_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": true,
+          "isNotNull": true
+        }
+      ],
       "relationships": []
     }
   ],
