@@ -1,6 +1,19 @@
 {
   "version": 1,
-  "shapes": [],
+  "shapes": [
+    {
+      "id": "79ced492-6c08-4f3f-af50-14dad180cd39",
+      "name": "site",
+      "position": {
+        "x": 457.3125529183568,
+        "y": 406.2538568723434,
+        "w": 200,
+        "h": 80
+      },
+      "properties": [],
+      "relationships": []
+    }
+  ],
   "dialect": "postgres",
   "baseline": [
     {
