@@ -282,7 +282,19 @@
         "w": 200,
         "h": 80
       },
-      "properties": [],
+      "properties": [
+        {
+          "id": "5f72f242-f6bc-4dd6-b7e8-08c757f90c9f",
+          "sequence": 1,
+          "key": "PK",
+          "property": "scope_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": true,
+          "isNotNull": true
+        }
+      ],
       "relationships": []
     }
   ],
