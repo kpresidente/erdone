@@ -678,697 +678,677 @@
   "dialect": "postgres",
   "baseline": [
     {
-      "id": "8553e9e2-124e-428f-aa8c-b2301d9b0ec8",
-      "name": "Customer",
+      "id": "79ced492-6c08-4f3f-af50-14dad180cd39",
+      "name": "site",
       "position": {
-        "x": 171.1698291341071,
-        "y": 192.71237995083442,
+        "x": 92,
+        "y": 111,
         "w": 200,
-        "h": 118
+        "h": 80
       },
       "properties": [
         {
-          "id": "6587ca0f-4780-4e1e-884a-1b4504b28384",
+          "id": "6969fb06-34e8-4413-83c2-cd2340470829",
           "sequence": 1,
           "key": "PK",
-          "property": "CustomerId",
-          "type": "INTEGER",
+          "property": "site_id",
+          "type": "UUID",
           "length": null,
           "precision": null,
           "isPrimary": true,
-          "isNotNull": true,
-          "isIdentity": true
-        },
-        {
-          "id": "0802dbd4-e8f5-474d-aebb-e7bf60760d90",
-          "sequence": 2,
-          "key": null,
-          "property": "FirstName",
-          "type": "VARCHAR",
-          "length": 50,
-          "precision": null,
-          "isPrimary": false,
           "isNotNull": true
-        },
-        {
-          "id": "2204639b-dec6-46fd-8aeb-8fe9b26e5919",
-          "sequence": 3,
-          "key": null,
-          "property": "LastName",
-          "type": "VARCHAR",
-          "length": 50,
-          "precision": null,
-          "isPrimary": false,
-          "isNotNull": true
-        },
-        {
-          "id": "dfd1cae0-e05b-44d3-8cd6-66d8335857eb",
-          "sequence": 4,
-          "key": null,
-          "property": "Email",
-          "type": "VARCHAR",
-          "length": 120,
-          "precision": null,
-          "isPrimary": false,
-          "isNotNull": true,
-          "isUnique": true
-        },
-        {
-          "id": "09dc2cb8-8c2b-47e4-bf71-68ebb49fe466",
-          "sequence": 5,
-          "key": null,
-          "property": "CreatedAt",
-          "type": "TIMESTAMP",
-          "length": null,
-          "precision": null,
-          "isPrimary": false,
-          "isNotNull": true,
-          "defaultValue": "now()"
         }
       ],
-      "relationships": [],
-      "description": "Application end users with shipping and billing addresses."
+      "relationships": []
     },
     {
-      "id": "f7636718-21ac-44bd-9018-0c41082fa85e",
-      "name": "Address",
+      "id": "20b3f8fb-a1b7-4753-b71a-9224bf2c548a",
+      "name": "structure",
       "position": {
-        "x": 209.83857350845634,
-        "y": 468.28284815885695,
+        "x": 92,
+        "y": 251,
         "w": 200,
-        "h": 172
+        "h": 80
       },
       "properties": [
         {
-          "id": "560e7f2f-6823-461b-b27a-0ad2e5430e81",
+          "id": "03f1a6d7-77b6-45db-b20e-ee28848dace8",
           "sequence": 1,
           "key": "PK",
-          "property": "AddressId",
-          "type": "INTEGER",
+          "property": "structure_id",
+          "type": "UUID",
           "length": null,
           "precision": null,
           "isPrimary": true,
-          "isNotNull": true,
-          "isIdentity": true
+          "isNotNull": true
         },
         {
-          "id": "e4c4d3d8-a723-4e10-a755-fdd45a21e37d",
+          "id": "051d7f79-9fdf-408f-92d2-3ed729e37a19",
           "sequence": 2,
           "key": "FK",
-          "property": "CustomerId",
-          "type": "INTEGER",
+          "property": "site_id",
+          "type": "UUID",
           "length": null,
           "precision": null,
-          "isPrimary": false,
-          "isNotNull": true
-        },
-        {
-          "id": "f64f0dae-59bf-40aa-a160-3340685d5eed",
-          "sequence": 3,
-          "key": null,
-          "property": "Line1",
-          "type": "VARCHAR",
-          "length": 120,
-          "precision": null,
-          "isPrimary": false,
-          "isNotNull": true
-        },
-        {
-          "id": "c2695bf9-b892-4621-a33c-a0a6c44a216e",
-          "sequence": 4,
-          "key": null,
-          "property": "Line2",
-          "type": "VARCHAR",
-          "length": 120,
-          "precision": null,
-          "isPrimary": false,
-          "isNotNull": false
-        },
-        {
-          "id": "008ed80a-759f-4a3f-815a-99625d57148e",
-          "sequence": 5,
-          "key": null,
-          "property": "City",
-          "type": "VARCHAR",
-          "length": 60,
-          "precision": null,
-          "isPrimary": false,
-          "isNotNull": true
-        },
-        {
-          "id": "d12945e8-ef6d-49ad-992a-02406d405aa9",
-          "sequence": 6,
-          "key": null,
-          "property": "State",
-          "type": "VARCHAR",
-          "length": 30,
-          "precision": null,
-          "isPrimary": false,
-          "isNotNull": true
-        },
-        {
-          "id": "945a045d-2834-4499-9b3a-2a419d040cac",
-          "sequence": 7,
-          "key": null,
-          "property": "PostalCode",
-          "type": "VARCHAR",
-          "length": 20,
-          "precision": null,
-          "isPrimary": false,
-          "isNotNull": true
-        },
-        {
-          "id": "96f87ee8-6851-4b5f-8ab0-2f883297c946",
-          "sequence": 8,
-          "key": null,
-          "property": "IsBilling",
-          "type": "BOOLEAN",
-          "length": null,
-          "precision": null,
-          "isPrimary": false,
-          "isNotNull": true,
-          "defaultValue": "false"
-        }
-      ],
-      "relationships": [
-        {
-          "id": "4e2ef00b-826a-4ff1-9da6-4a46c4f80b77",
-          "source": {
-            "id": "e4c4d3d8-a723-4e10-a755-fdd45a21e37d"
-          },
-          "reference": {
-            "id": "6587ca0f-4780-4e1e-884a-1b4504b28384"
-          },
-          "parentRequired": true,
-          "onDelete": "cascade"
-        }
-      ],
-      "description": "Shipping and billing addresses belonging to a customer.",
-      "indexes": [
-        {
-          "id": "472768e8-c0f3-44f5-8e51-d32c64ece542",
-          "name": "IX_Address_CustomerId",
-          "keyColumns": [
-            {
-              "columnId": "e4c4d3d8-a723-4e10-a755-fdd45a21e37d"
-            }
-          ]
-        }
-      ],
-      "layerId": "layer-addresses"
-    },
-    {
-      "id": "06b120d8-127b-4d1b-82ff-23216c4f0596",
-      "name": "SalesOrder",
-      "position": {
-        "x": 475.2417416472661,
-        "y": 294.6358145095324,
-        "w": 200,
-        "h": 118
-      },
-      "properties": [
-        {
-          "id": "0b23e425-581d-4e35-ad6a-74aff295d545",
-          "sequence": 1,
-          "key": "PK",
-          "property": "OrderId",
-          "type": "INTEGER",
-          "length": null,
-          "precision": null,
-          "isPrimary": true,
-          "isNotNull": true,
-          "isIdentity": true
-        },
-        {
-          "id": "ffcdb07b-46ff-481e-acf5-17ac0064b5c9",
-          "sequence": 2,
-          "key": "FK",
-          "property": "CustomerId",
-          "type": "INTEGER",
-          "length": null,
-          "precision": null,
-          "isPrimary": false,
-          "isNotNull": true
-        },
-        {
-          "id": "abf501d1-e56c-442a-8306-0b23518e1896",
-          "sequence": 3,
-          "key": null,
-          "property": "OrderedAt",
-          "type": "TIMESTAMP",
-          "length": null,
-          "precision": null,
-          "isPrimary": false,
-          "isNotNull": true,
-          "defaultValue": "now()"
-        },
-        {
-          "id": "1ddc7389-56d1-430d-8201-9ca888807516",
-          "sequence": 4,
-          "key": null,
-          "property": "StatusCode",
-          "type": "VARCHAR",
-          "length": 20,
-          "precision": null,
-          "isPrimary": false,
-          "isNotNull": true,
-          "defaultValue": "'pending'"
-        },
-        {
-          "id": "18512d93-6267-45b7-b547-2a1efede7d54",
-          "sequence": 5,
-          "key": null,
-          "property": "Total",
-          "type": "NUMERIC",
-          "length": 12,
-          "precision": 2,
           "isPrimary": false,
           "isNotNull": true
         }
       ],
       "relationships": [
         {
-          "id": "aaf881fb-834a-4c00-9f99-f74d48a3f4c8",
+          "id": "1d5ba394-95c9-4264-af56-f53680fcf635",
           "source": {
-            "id": "ffcdb07b-46ff-481e-acf5-17ac0064b5c9"
+            "id": "051d7f79-9fdf-408f-92d2-3ed729e37a19"
           },
           "reference": {
-            "id": "6587ca0f-4780-4e1e-884a-1b4504b28384"
+            "id": "6969fb06-34e8-4413-83c2-cd2340470829"
           },
-          "parentRequired": true
+          "parentRequired": false
         }
       ],
-      "description": "Customer purchases. Total is denormalized from OrderItems for fast list views.",
       "indexes": [
         {
-          "id": "50fbfdb3-77da-4cf3-844b-aff9b12dd56b",
-          "name": "IX_SalesOrder_CustomerId",
+          "id": "c9fd1218-5869-430c-a1e8-986b7d539313",
+          "name": "IX_structure_site_id",
           "keyColumns": [
             {
-              "columnId": "ffcdb07b-46ff-481e-acf5-17ac0064b5c9"
+              "columnId": "051d7f79-9fdf-408f-92d2-3ed729e37a19"
             }
           ]
         }
       ]
     },
     {
-      "id": "ce8e0766-ee31-4353-a1d2-ee20dae4c8fc",
-      "name": "Payment",
+      "id": "bfe4bda6-000c-4db5-b7be-8e1b571ad252",
+      "name": "lp_system",
       "position": {
-        "x": 552.4255143773989,
-        "y": 625.0523375070786,
+        "x": 120,
+        "y": 391,
         "w": 200,
-        "h": 118
+        "h": 80
       },
       "properties": [
         {
-          "id": "7522f4b5-5f98-4c39-8457-1b7becaa6d56",
+          "id": "ddf5f960-bfde-4b51-b0e0-6b6b02b37ecf",
           "sequence": 1,
           "key": "PK",
-          "property": "PaymentId",
-          "type": "INTEGER",
+          "property": "lp_system_id",
+          "type": "UUID",
           "length": null,
           "precision": null,
           "isPrimary": true,
-          "isNotNull": true,
-          "isIdentity": true
+          "isNotNull": true
         },
         {
-          "id": "e96823e3-814d-4ff2-8bfb-14dd27ad14a8",
+          "id": "a15d8a25-4cf0-4985-94d2-616f5cfddfd4",
           "sequence": 2,
           "key": "FK",
-          "property": "OrderId",
-          "type": "INTEGER",
+          "property": "structure_id",
+          "type": "UUID",
           "length": null,
           "precision": null,
           "isPrimary": false,
-          "isNotNull": true,
-          "isUnique": true
-        },
-        {
-          "id": "bfd68f00-2cc8-49ec-8654-fd2cf9095822",
-          "sequence": 3,
-          "key": null,
-          "property": "Amount",
-          "type": "NUMERIC",
-          "length": 12,
-          "precision": 2,
-          "isPrimary": false,
           "isNotNull": true
-        },
-        {
-          "id": "b2f5d4fe-5dc3-4746-aa22-a0990b55cb5b",
-          "sequence": 4,
-          "key": null,
-          "property": "Method",
-          "type": "VARCHAR",
-          "length": 30,
-          "precision": null,
-          "isPrimary": false,
-          "isNotNull": true
-        },
-        {
-          "id": "cc6229a1-c4cc-4c0f-8ac1-32d2623f85bc",
-          "sequence": 5,
-          "key": null,
-          "property": "ProcessedAt",
-          "type": "TIMESTAMP",
-          "length": null,
-          "precision": null,
-          "isPrimary": false,
-          "isNotNull": true,
-          "defaultValue": "now()"
         }
       ],
       "relationships": [
         {
-          "id": "21ecda9a-9d37-413b-8fff-b89d9bd122fc",
+          "id": "f6c31fe7-352b-47d5-910e-67496661a964",
           "source": {
-            "id": "e96823e3-814d-4ff2-8bfb-14dd27ad14a8"
+            "id": "a15d8a25-4cf0-4985-94d2-616f5cfddfd4"
           },
           "reference": {
-            "id": "0b23e425-581d-4e35-ad6a-74aff295d545"
+            "id": "03f1a6d7-77b6-45db-b20e-ee28848dace8"
           },
-          "parentRequired": true,
-          "onDelete": "cascade",
-          "targetCardinality": "only-one"
+          "parentRequired": false
         }
       ],
-      "description": "Payment captured for an order (at most one per order).",
       "indexes": [
         {
-          "id": "b0dc6009-0400-4d7d-8286-e79c8b229ae8",
-          "name": "IX_Payment_OrderId",
+          "id": "c8b29b3a-aca9-4975-a322-3ddf0536b268",
+          "name": "IX_lp_system_structure_id",
           "keyColumns": [
             {
-              "columnId": "e96823e3-814d-4ff2-8bfb-14dd27ad14a8"
+              "columnId": "a15d8a25-4cf0-4985-94d2-616f5cfddfd4"
             }
           ]
         }
       ]
     },
     {
-      "id": "d3b36220-0ea1-4e43-9d53-fc64cae55e68",
-      "name": "OrderItem",
+      "id": "bed2227f-cd7a-4dc3-8e94-2355ed1ec905",
+      "name": "lp_partial",
       "position": {
-        "x": 884.1006732523755,
-        "y": 151.15314918517566,
+        "x": 120,
+        "y": 531,
         "w": 200,
-        "h": 118
+        "h": 80
       },
       "properties": [
         {
-          "id": "17bbc78e-328b-41f7-8586-3f5cf08d06eb",
+          "id": "c61dacbb-3a8a-4d3b-8003-acbe58bb8570",
           "sequence": 1,
           "key": "PK",
-          "property": "OrderId",
-          "type": "INTEGER",
+          "property": "lp_partial_id",
+          "type": "UUID",
           "length": null,
           "precision": null,
           "isPrimary": true,
           "isNotNull": true
         },
         {
-          "id": "2e959803-2cec-415c-ae38-84ab17888142",
+          "id": "7f1c778b-3ce7-452d-ab03-5caa2fb02dca",
           "sequence": 2,
-          "key": "PK",
-          "property": "LineSequence",
-          "type": "INTEGER",
-          "length": null,
-          "precision": null,
-          "isPrimary": true,
-          "isNotNull": true
-        },
-        {
-          "id": "98fb6131-6c26-49eb-bb5c-1caadfbd7ade",
-          "sequence": 3,
           "key": "FK",
-          "property": "ProductId",
-          "type": "INTEGER",
+          "property": "lp_system_id",
+          "type": "UUID",
           "length": null,
           "precision": null,
-          "isPrimary": false,
-          "isNotNull": true
-        },
-        {
-          "id": "ff817ece-5d99-47ec-90ab-4764637885fe",
-          "sequence": 4,
-          "key": null,
-          "property": "Quantity",
-          "type": "INTEGER",
-          "length": null,
-          "precision": null,
-          "isPrimary": false,
-          "isNotNull": true,
-          "defaultValue": "1"
-        },
-        {
-          "id": "2b81fdc6-c898-4229-943c-0bdac3edfdfe",
-          "sequence": 5,
-          "key": null,
-          "property": "UnitPrice",
-          "type": "NUMERIC",
-          "length": 10,
-          "precision": 2,
           "isPrimary": false,
           "isNotNull": true
         }
       ],
       "relationships": [
         {
-          "id": "672aedfb-a8a7-41cc-8184-d898e9d1ea14",
+          "id": "1d45fd89-50ca-4852-a1d2-37f4c1208f09",
           "source": {
-            "id": "17bbc78e-328b-41f7-8586-3f5cf08d06eb"
+            "id": "7f1c778b-3ce7-452d-ab03-5caa2fb02dca"
           },
           "reference": {
-            "id": "0b23e425-581d-4e35-ad6a-74aff295d545"
+            "id": "ddf5f960-bfde-4b51-b0e0-6b6b02b37ecf"
           },
-          "parentRequired": true,
-          "onDelete": "cascade",
-          "identifying": true
-        },
-        {
-          "id": "433e061c-de8d-4dec-843b-8720879bd61d",
-          "source": {
-            "id": "98fb6131-6c26-49eb-bb5c-1caadfbd7ade"
-          },
-          "reference": {
-            "id": "75dafb92-d4be-4c1b-a1e2-bfc22ad8cb9b"
-          },
-          "parentRequired": true
+          "parentRequired": false,
+          "identifying": false
         }
       ],
-      "description": "Line items on an order; a weak entity identified by its order plus a line sequence number.",
       "indexes": [
         {
-          "id": "c1d1f2f6-c38d-45b2-9f57-268598eba336",
-          "name": "IX_OrderItem_ProductId",
+          "id": "b593fd84-7a8a-4dc7-a9ae-667404f106e2",
+          "name": "IX_lp_partial_lp_system_id",
           "keyColumns": [
             {
-              "columnId": "98fb6131-6c26-49eb-bb5c-1caadfbd7ade"
+              "columnId": "7f1c778b-3ce7-452d-ab03-5caa2fb02dca"
             }
           ]
         }
       ]
     },
     {
-      "id": "409f47b0-588a-4cd2-999b-917131bf2781",
-      "name": "Product",
+      "id": "a2601933-1fd8-4f3c-b1df-c318caf513c9",
+      "name": "scope_item",
       "position": {
-        "x": 787.1679889607263,
-        "y": 433.55729225920476,
+        "x": 120,
+        "y": 671,
         "w": 200,
-        "h": 136
+        "h": 82
       },
       "properties": [
         {
-          "id": "75dafb92-d4be-4c1b-a1e2-bfc22ad8cb9b",
+          "id": "90268b14-ee3c-4054-a8eb-1c4c0f53bf7d",
           "sequence": 1,
           "key": "PK",
-          "property": "ProductId",
-          "type": "INTEGER",
+          "property": "lp_partial_id",
+          "type": "UUID",
           "length": null,
           "precision": null,
           "isPrimary": true,
-          "isNotNull": true,
-          "isIdentity": true
+          "isNotNull": true
         },
         {
-          "id": "92f5cb5b-f1e7-4af2-9fc0-987a028b9f31",
+          "id": "97fcd9a7-fbf3-435c-8228-01a430b5cdcf",
           "sequence": 2,
-          "key": "FK",
-          "property": "CategoryId",
-          "type": "INTEGER",
+          "key": "PK",
+          "property": "structure_id",
+          "type": "UUID",
           "length": null,
           "precision": null,
-          "isPrimary": false,
+          "isPrimary": true,
           "isNotNull": true
         },
         {
-          "id": "9987146e-1e0f-496e-94c0-8a94e7e5bbf7",
+          "id": "556f0ed7-8395-4904-910e-945eeb73359e",
           "sequence": 3,
-          "key": null,
-          "property": "Sku",
-          "type": "VARCHAR",
-          "length": 40,
-          "precision": null,
-          "isPrimary": false,
-          "isNotNull": true,
-          "isUnique": true
-        },
-        {
-          "id": "95ddad52-471a-43cc-afae-c97ddd348b5e",
-          "sequence": 4,
-          "key": null,
-          "property": "Name",
-          "type": "VARCHAR",
-          "length": 120,
-          "precision": null,
-          "isPrimary": false,
-          "isNotNull": true
-        },
-        {
-          "id": "48b8a4dd-de33-4496-86d3-f9aa75a919d8",
-          "sequence": 5,
-          "key": null,
-          "property": "Price",
-          "type": "NUMERIC",
-          "length": 10,
-          "precision": 2,
-          "isPrimary": false,
-          "isNotNull": true
-        },
-        {
-          "id": "f22128f0-043e-4723-8c67-e4212d0db86e",
-          "sequence": 6,
-          "key": null,
-          "property": "Active",
-          "type": "BOOLEAN",
+          "key": "PK",
+          "property": "scope_id",
+          "type": "UUID",
           "length": null,
           "precision": null,
-          "isPrimary": false,
-          "isNotNull": true,
-          "defaultValue": "true"
+          "isPrimary": true,
+          "isNotNull": true
         }
       ],
       "relationships": [
         {
-          "id": "a8d96f16-8c8a-4d77-8434-cc010d06e5c9",
+          "id": "1393e6b0-5798-4fec-8c89-e38bfef91d21",
           "source": {
-            "id": "92f5cb5b-f1e7-4af2-9fc0-987a028b9f31"
+            "id": "90268b14-ee3c-4054-a8eb-1c4c0f53bf7d"
           },
           "reference": {
-            "id": "dbb8e411-f9af-4d8f-b332-258f4a364f8d"
+            "id": "c61dacbb-3a8a-4d3b-8003-acbe58bb8570"
           },
-          "parentRequired": true
+          "parentRequired": false
+        },
+        {
+          "id": "b0c85fda-8f49-4867-bed2-78828e742264",
+          "source": {
+            "id": "97fcd9a7-fbf3-435c-8228-01a430b5cdcf"
+          },
+          "reference": {
+            "id": "03f1a6d7-77b6-45db-b20e-ee28848dace8"
+          },
+          "parentRequired": false
+        },
+        {
+          "id": "a0ce7ecf-d0ee-41be-a194-ac7706eccf35",
+          "source": {
+            "id": "556f0ed7-8395-4904-910e-945eeb73359e"
+          },
+          "reference": {
+            "id": "5f72f242-f6bc-4dd6-b7e8-08c757f90c9f"
+          },
+          "parentRequired": false
         }
       ],
-      "description": "Catalog products available for sale, each in one category.",
       "indexes": [
         {
-          "id": "7984236a-422a-4d0b-ae13-0f82d9146e53",
-          "name": "IX_Product_CategoryId",
+          "id": "3c2e91cd-4fcf-4e28-b793-ff64d8305975",
+          "name": "IX_scope_item_lp_partial_id",
           "keyColumns": [
             {
-              "columnId": "92f5cb5b-f1e7-4af2-9fc0-987a028b9f31"
+              "columnId": "90268b14-ee3c-4054-a8eb-1c4c0f53bf7d"
+            }
+          ]
+        },
+        {
+          "id": "746fa413-c420-4459-aa2f-ef34155f7f08",
+          "name": "IX_scope_item_structure_id",
+          "keyColumns": [
+            {
+              "columnId": "97fcd9a7-fbf3-435c-8228-01a430b5cdcf"
+            }
+          ]
+        },
+        {
+          "id": "f7c52d7b-89b6-42ee-85f6-1aa54c2ecabf",
+          "name": "IX_scope_item_scope_id",
+          "keyColumns": [
+            {
+              "columnId": "556f0ed7-8395-4904-910e-945eeb73359e"
             }
           ]
         }
-      ],
-      "layerId": "layer-catalog"
+      ]
     },
     {
-      "id": "6d062471-e889-4960-a145-bfa4f40ea8fb",
-      "name": "Category",
+      "id": "de0380c7-cc03-460b-b7d8-27f5a3788c6b",
+      "name": "scope",
       "position": {
-        "x": 1062.871833589008,
-        "y": 345.95401010720855,
+        "x": 337,
+        "y": 531,
         "w": 200,
-        "h": 100
+        "h": 80
       },
       "properties": [
         {
-          "id": "dbb8e411-f9af-4d8f-b332-258f4a364f8d",
+          "id": "5f72f242-f6bc-4dd6-b7e8-08c757f90c9f",
           "sequence": 1,
           "key": "PK",
-          "property": "CategoryId",
-          "type": "INTEGER",
+          "property": "scope_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": true,
+          "isNotNull": true
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "8e0e3ded-803b-447d-999e-518d93b70eaa",
+      "name": "proposal",
+      "position": {
+        "x": 771,
+        "y": 531,
+        "w": 200,
+        "h": 80
+      },
+      "properties": [
+        {
+          "id": "60169084-1d55-4142-84ef-3108183aad4b",
+          "sequence": 1,
+          "key": "PK",
+          "property": "proposal_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": true,
+          "isNotNull": true
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "baa13728-b787-45de-91ba-83b8be8c9f31",
+      "name": "submittal",
+      "position": {
+        "x": 987,
+        "y": 531,
+        "w": 200,
+        "h": 80
+      },
+      "properties": [
+        {
+          "id": "6845fe99-0aac-4d78-bf76-c438f388d07e",
+          "sequence": 1,
+          "key": "PK",
+          "property": "submittal_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": true,
+          "isNotNull": true
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "628f0493-0e59-4823-aafb-cef0c66dd4a0",
+      "name": "work_order",
+      "position": {
+        "x": 554,
+        "y": 531,
+        "w": 200,
+        "h": 80
+      },
+      "properties": [
+        {
+          "id": "8d47b5e2-6142-48be-a4c6-3f344a5d2d62",
+          "sequence": 1,
+          "key": "PK",
+          "property": "work_order_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": true,
+          "isNotNull": true
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "8789349c-b0b1-4d8b-be75-d2d148865d29",
+      "name": "phase",
+      "position": {
+        "x": 571,
+        "y": 669,
+        "w": 200,
+        "h": 118
+      },
+      "properties": [
+        {
+          "id": "c8a89f8f-0b27-490c-a05c-a0c53ea22fb4",
+          "sequence": 1,
+          "key": "PK",
+          "property": "phase_id",
+          "type": "",
           "length": null,
           "precision": null,
           "isPrimary": true,
           "isNotNull": true,
-          "isIdentity": true
+          "isUnique": false
         },
         {
-          "id": "7a80f53a-92c0-4d8c-8693-4ff94c1ea18f",
+          "id": "5438d2de-e11b-46d1-a74c-481dd841a725",
           "sequence": 2,
-          "key": null,
-          "property": "Name",
-          "type": "VARCHAR",
-          "length": 80,
+          "key": "FK",
+          "property": "scope_id",
+          "type": "UUID",
+          "length": null,
           "precision": null,
           "isPrimary": false,
           "isNotNull": true,
-          "isUnique": true
+          "isIdentity": false
         },
         {
-          "id": "6f5b1327-604b-4492-847b-900ca42e1dc9",
+          "id": "8db1b193-161f-471e-a669-c44fd137b652",
           "sequence": 3,
-          "key": null,
-          "property": "Description",
-          "type": "VARCHAR",
-          "length": 500,
+          "key": "FK",
+          "property": "proposal_id",
+          "type": "UUID",
+          "length": null,
           "precision": null,
           "isPrimary": false,
-          "isNotNull": false
+          "isNotNull": true
+        },
+        {
+          "id": "f05c9bd9-8ebd-4f87-9c6e-25207d86bf5c",
+          "sequence": 4,
+          "key": "FK",
+          "property": "submittal_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": false,
+          "isNotNull": true
+        },
+        {
+          "id": "fb991db5-961a-4056-b6b3-b8f0ed87ca0e",
+          "sequence": 5,
+          "key": "FK",
+          "property": "work_order_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": false,
+          "isNotNull": true
         }
       ],
-      "relationships": [],
-      "description": "Product categories for organizing the catalog.",
-      "indexes": [],
-      "layerId": "layer-catalog"
-    }
-  ],
-  "baselineViews": [
-    {
-      "id": "view-customer-orders",
-      "name": "CustomerOrders",
-      "position": {
-        "x": 171,
-        "y": 833.0523375070786,
-        "w": 220,
-        "h": 130
-      },
-      "query": {
-        "from": {
-          "tableId": "8553e9e2-124e-428f-aa8c-b2301d9b0ec8"
+      "relationships": [
+        {
+          "id": "ff1f64b8-b978-4d2b-a487-6e589158453a",
+          "source": {
+            "id": "5438d2de-e11b-46d1-a74c-481dd841a725"
+          },
+          "reference": {
+            "id": "5f72f242-f6bc-4dd6-b7e8-08c757f90c9f"
+          },
+          "parentRequired": false
         },
-        "joins": [
-          {
-            "tableId": "06b120d8-127b-4d1b-82ff-23216c4f0596",
-            "type": "inner",
-            "on": {
-              "kind": "relationship",
-              "relationshipId": "aaf881fb-834a-4c00-9f99-f74d48a3f4c8"
+        {
+          "id": "726c2a87-179f-4344-9f95-da9cb97c7f25",
+          "source": {
+            "id": "8db1b193-161f-471e-a669-c44fd137b652"
+          },
+          "reference": {
+            "id": "60169084-1d55-4142-84ef-3108183aad4b"
+          },
+          "parentRequired": false
+        },
+        {
+          "id": "5aeb8000-5e80-4d74-8a32-89ba23ac1265",
+          "source": {
+            "id": "f05c9bd9-8ebd-4f87-9c6e-25207d86bf5c"
+          },
+          "reference": {
+            "id": "6845fe99-0aac-4d78-bf76-c438f388d07e"
+          },
+          "parentRequired": false
+        },
+        {
+          "id": "4df0df94-94c8-437f-9f05-3be7a9ad65f4",
+          "source": {
+            "id": "fb991db5-961a-4056-b6b3-b8f0ed87ca0e"
+          },
+          "reference": {
+            "id": "8d47b5e2-6142-48be-a4c6-3f344a5d2d62"
+          },
+          "parentRequired": false
+        }
+      ],
+      "indexes": [
+        {
+          "id": "f62a6f02-5102-427d-b709-d628614d79d5",
+          "name": "IX_phase_scope_id",
+          "keyColumns": [
+            {
+              "columnId": "5438d2de-e11b-46d1-a74c-481dd841a725"
             }
-          }
-        ],
-        "select": [
-          {
-            "columnId": "0802dbd4-e8f5-474d-aebb-e7bf60760d90"
-          },
-          {
-            "columnId": "dfd1cae0-e05b-44d3-8cd6-66d8335857eb"
-          },
-          {
-            "columnId": "0b23e425-581d-4e35-ad6a-74aff295d545"
-          },
-          {
-            "columnId": "18512d93-6267-45b7-b547-2a1efede7d54"
-          }
-        ]
+          ]
+        },
+        {
+          "id": "a7500647-d00f-46c8-9191-7049292a7610",
+          "name": "IX_phase_proposal_id",
+          "keyColumns": [
+            {
+              "columnId": "8db1b193-161f-471e-a669-c44fd137b652"
+            }
+          ]
+        },
+        {
+          "id": "51ad8f51-218a-4c30-b556-f19fa462a842",
+          "name": "IX_phase_submittal_id",
+          "keyColumns": [
+            {
+              "columnId": "f05c9bd9-8ebd-4f87-9c6e-25207d86bf5c"
+            }
+          ]
+        },
+        {
+          "id": "59760454-eacd-4e76-a914-ceef2028086b",
+          "name": "IX_phase_work_order_id",
+          "keyColumns": [
+            {
+              "columnId": "fb991db5-961a-4056-b6b3-b8f0ed87ca0e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "38b520cd-e230-4cdf-aa6e-dec90b9a719c",
+      "name": "cost_collection",
+      "position": {
+        "x": 509,
+        "y": 842,
+        "w": 200,
+        "h": 80
       },
-      "materialized": true
+      "properties": [
+        {
+          "id": "581a8b3f-bdbe-4f62-92d1-aade0c34d1fc",
+          "sequence": 1,
+          "key": "FK",
+          "property": "scope_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": false,
+          "isNotNull": true
+        },
+        {
+          "id": "fcf7f0f4-68eb-4c91-b45f-06d5e697ee5f",
+          "sequence": 2,
+          "key": "FK",
+          "property": "structure_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": false,
+          "isNotNull": true
+        },
+        {
+          "id": "09f222c8-4bc0-49f2-8a07-fd5180c8a13d",
+          "sequence": 3,
+          "key": "FK",
+          "property": "lp_partial_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": false,
+          "isNotNull": true
+        }
+      ],
+      "relationships": [
+        {
+          "id": "9f331962-ffc7-466a-a137-73ae71da4d4b",
+          "source": {
+            "id": "e1da0d39-921d-47d9-a3cf-90efb4eb9e85"
+          },
+          "reference": {
+            "id": "90268b14-ee3c-4054-a8eb-1c4c0f53bf7d"
+          },
+          "parentRequired": false
+        },
+        {
+          "id": "3f88ae42-fc67-48ed-a74c-ac4ae23fdf82",
+          "source": {
+            "id": "e1da0d39-921d-47d9-a3cf-90efb4eb9e85"
+          },
+          "reference": {
+            "id": "c61dacbb-3a8a-4d3b-8003-acbe58bb8570"
+          },
+          "parentRequired": false
+        },
+        {
+          "id": "b04aa652-643f-4e14-b3b7-fed5e1e01ca9",
+          "source": {
+            "id": "581a8b3f-bdbe-4f62-92d1-aade0c34d1fc"
+          },
+          "reference": {
+            "id": "556f0ed7-8395-4904-910e-945eeb73359e"
+          },
+          "parentRequired": false
+        },
+        {
+          "id": "aa2f3847-11c9-4ca0-9b9d-b01a87a7a68e",
+          "source": {
+            "id": "fcf7f0f4-68eb-4c91-b45f-06d5e697ee5f"
+          },
+          "reference": {
+            "id": "97fcd9a7-fbf3-435c-8228-01a430b5cdcf"
+          },
+          "parentRequired": false
+        },
+        {
+          "id": "c58d4013-9602-4ce4-b3a7-aea30a00e1a6",
+          "source": {
+            "id": "09f222c8-4bc0-49f2-8a07-fd5180c8a13d"
+          },
+          "reference": {
+            "id": "90268b14-ee3c-4054-a8eb-1c4c0f53bf7d"
+          },
+          "parentRequired": false
+        }
+      ],
+      "indexes": [
+        {
+          "id": "038ac842-98c6-4368-bc4d-a425a6f71a6f",
+          "name": "IX_cost_collection_scope_id",
+          "keyColumns": [
+            {
+              "columnId": "581a8b3f-bdbe-4f62-92d1-aade0c34d1fc"
+            }
+          ]
+        },
+        {
+          "id": "a54da84a-57b0-4128-a37e-cbe5c5179281",
+          "name": "IX_cost_collection_structure_id",
+          "keyColumns": [
+            {
+              "columnId": "fcf7f0f4-68eb-4c91-b45f-06d5e697ee5f"
+            }
+          ]
+        },
+        {
+          "id": "72705a13-d3d4-4853-8f65-dc7b0e90b551",
+          "name": "IX_cost_collection_lp_partial_id",
+          "keyColumns": [
+            {
+              "columnId": "09f222c8-4bc0-49f2-8a07-fd5180c8a13d"
+            }
+          ]
+        }
+      ]
     }
   ],
   "layers": [
