@@ -196,6 +196,18 @@
           ]
         }
       ]
+    },
+    {
+      "id": "a2601933-1fd8-4f3c-b1df-c318caf513c9",
+      "name": "scope_item",
+      "position": {
+        "x": 569.5,
+        "y": -150.5,
+        "w": 200,
+        "h": 80
+      },
+      "properties": [],
+      "relationships": []
     }
   ],
   "dialect": "postgres",
