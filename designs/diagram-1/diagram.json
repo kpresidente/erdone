@@ -272,6 +272,18 @@
           ]
         }
       ]
+    },
+    {
+      "id": "de0380c7-cc03-460b-b7d8-27f5a3788c6b",
+      "name": "scope",
+      "position": {
+        "x": 960,
+        "y": 290,
+        "w": 200,
+        "h": 80
+      },
+      "properties": [],
+      "relationships": []
     }
   ],
   "dialect": "postgres",
