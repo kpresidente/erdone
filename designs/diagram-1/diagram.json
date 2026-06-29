@@ -398,6 +398,30 @@
         }
       ],
       "relationships": []
+    },
+    {
+      "id": "8789349c-b0b1-4d8b-be75-d2d148865d29",
+      "name": "phase",
+      "position": {
+        "x": 1270,
+        "y": 380,
+        "w": 200,
+        "h": 80
+      },
+      "properties": [
+        {
+          "id": "c8a89f8f-0b27-490c-a05c-a0c53ea22fb4",
+          "sequence": 1,
+          "key": "PK",
+          "property": "phase_id",
+          "type": "",
+          "length": null,
+          "precision": null,
+          "isPrimary": true,
+          "isNotNull": true
+        }
+      ],
+      "relationships": []
     }
   ],
   "dialect": "postgres",
