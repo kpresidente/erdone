@@ -10,7 +10,19 @@
         "w": 200,
         "h": 80
       },
-      "properties": [],
+      "properties": [
+        {
+          "id": "6969fb06-34e8-4413-83c2-cd2340470829",
+          "sequence": 1,
+          "key": "PK",
+          "property": "site_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": true,
+          "isNotNull": true
+        }
+      ],
       "relationships": []
     }
   ],
