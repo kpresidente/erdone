@@ -418,7 +418,8 @@
           "length": null,
           "precision": null,
           "isPrimary": true,
-          "isNotNull": true
+          "isNotNull": true,
+          "isUnique": false
         },
         {
           "id": "5438d2de-e11b-46d1-a74c-481dd841a725",
