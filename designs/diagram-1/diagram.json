@@ -45,9 +45,42 @@
           "precision": null,
           "isPrimary": true,
           "isNotNull": true
+        },
+        {
+          "id": "051d7f79-9fdf-408f-92d2-3ed729e37a19",
+          "sequence": 2,
+          "key": "FK",
+          "property": "site_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": false,
+          "isNotNull": true
         }
       ],
-      "relationships": []
+      "relationships": [
+        {
+          "id": "1d5ba394-95c9-4264-af56-f53680fcf635",
+          "source": {
+            "id": "051d7f79-9fdf-408f-92d2-3ed729e37a19"
+          },
+          "reference": {
+            "id": "6969fb06-34e8-4413-83c2-cd2340470829"
+          },
+          "parentRequired": false
+        }
+      ],
+      "indexes": [
+        {
+          "id": "c9fd1218-5869-430c-a1e8-986b7d539313",
+          "name": "IX_structure_site_id",
+          "keyColumns": [
+            {
+              "columnId": "051d7f79-9fdf-408f-92d2-3ed729e37a19"
+            }
+          ]
+        }
+      ]
     }
   ],
   "dialect": "postgres",
