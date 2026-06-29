@@ -138,6 +138,30 @@
           ]
         }
       ]
+    },
+    {
+      "id": "bed2227f-cd7a-4dc3-8e94-2355ed1ec905",
+      "name": "lp_partial",
+      "position": {
+        "x": 429.5,
+        "y": -22.5,
+        "w": 200,
+        "h": 80
+      },
+      "properties": [
+        {
+          "id": "c61dacbb-3a8a-4d3b-8003-acbe58bb8570",
+          "sequence": 1,
+          "key": "PK",
+          "property": "lp_partial_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": true,
+          "isNotNull": true
+        }
+      ],
+      "relationships": []
     }
   ],
   "dialect": "postgres",
