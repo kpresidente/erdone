@@ -430,6 +430,17 @@
           "precision": null,
           "isPrimary": false,
           "isNotNull": true
+        },
+        {
+          "id": "8db1b193-161f-471e-a669-c44fd137b652",
+          "sequence": 3,
+          "key": "FK",
+          "property": "proposal_id",
+          "type": "UUID",
+          "length": null,
+          "precision": null,
+          "isPrimary": false,
+          "isNotNull": true
         }
       ],
       "relationships": [
@@ -442,6 +453,16 @@
             "id": "5f72f242-f6bc-4dd6-b7e8-08c757f90c9f"
           },
           "parentRequired": false
+        },
+        {
+          "id": "726c2a87-179f-4344-9f95-da9cb97c7f25",
+          "source": {
+            "id": "8db1b193-161f-471e-a669-c44fd137b652"
+          },
+          "reference": {
+            "id": "60169084-1d55-4142-84ef-3108183aad4b"
+          },
+          "parentRequired": false
         }
       ],
       "indexes": [
@@ -451,6 +472,15 @@
           "keyColumns": [
             {
               "columnId": "5438d2de-e11b-46d1-a74c-481dd841a725"
+            }
+          ]
+        },
+        {
+          "id": "a7500647-d00f-46c8-9191-7049292a7610",
+          "name": "IX_phase_proposal_id",
+          "keyColumns": [
+            {
+              "columnId": "8db1b193-161f-471e-a669-c44fd137b652"
             }
           ]
         }
