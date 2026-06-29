@@ -1258,5 +1258,41 @@
       "visible": true,
       "color": "#5d4037"
     }
+  ],
+  "views": [
+    {
+      "id": "1cabe93c-1715-4469-bbe2-1cf845580fd7",
+      "name": "View 1",
+      "position": {
+        "x": 538.5,
+        "y": 914,
+        "w": 220,
+        "h": 130
+      },
+      "query": {
+        "from": {
+          "tableId": "79ced492-6c08-4f3f-af50-14dad180cd39"
+        },
+        "joins": [],
+        "select": []
+      }
+    },
+    {
+      "id": "06842501-1f8f-4680-9336-5782f689124e",
+      "name": "View 2",
+      "position": {
+        "x": 538.5,
+        "y": 1042,
+        "w": 220,
+        "h": 130
+      },
+      "query": {
+        "from": {
+          "tableId": "79ced492-6c08-4f3f-af50-14dad180cd39"
+        },
+        "joins": [],
+        "select": []
+      }
+    }
   ]
 }
