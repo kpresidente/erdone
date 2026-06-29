@@ -429,7 +429,8 @@
           "length": null,
           "precision": null,
           "isPrimary": false,
-          "isNotNull": true
+          "isNotNull": true,
+          "isIdentity": false
         },
         {
           "id": "8db1b193-161f-471e-a669-c44fd137b652",
